@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CodeScannerActivity"
+    tools:showIn="@layout/activity_code_scanner">
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avi"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
+            android:text="Loading please wait..."
+            android:textColor="@color/colorbackground"
+            android:textSize="18sp" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:padding="10dp"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="LineScaleIndicator" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/tranasaction_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="monospace"
+            android:text="Please do not press back button"
+            android:textColor="@color/backgroundColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="Transaction is in progress"
+            android:textColor="@color/backgroundColor"
+            android:textSize="18sp" />
+
+        <com.agrawalsuneet.squareloaderspack.loaders.UsainBoltLoader
+            android:id="@+id/progress"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            app:usainbolt_animDuration="400"
+            app:usainbolt_interpolator="@android:interpolator/linear"
+            app:usainbolt_rectangleColor="@color/grey"
+            app:usainbolt_rectangleWidth="18dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/pay_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/next_btn"
+            android:fontFamily="monospace"
+            android:onClick="startTransaction"
+            android:text="PAY"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/gym_uid"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@id/paying_credits" />
+
+        <TextView
+            android:id="@+id/Pgym_name"
+            android:text="Gym Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/gym_icon"
+            android:fontFamily="monospace"
+            android:paddingLeft="5dp"
+            android:textColor="@color/backgroundColor"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:text="Gym Address"
+            android:id="@+id/gym_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Pgym_name"
+            android:layout_toRightOf="@+id/gym_icon"
+            android:fontFamily="monospace"
+            android:paddingLeft="5dp" />
+        <TextView
+            android:text="Gym Id"
+            android:id="@+id/gym_uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gym_address"
+            android:layout_toRightOf="@+id/gym_icon"
+            android:fontFamily="monospace"
+            android:paddingLeft="5dp" />
+
+        <TextView
+            android:id="@+id/paying_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gym_uid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/backgroundColor"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/insufficient_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paying_credits"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="monospace"
+            android:text="Insufficient credits"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/insufficient_tv"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="Available"
+            android:textColor="@color/backgroundColor" />
+
+        <TextView
+            android:id="@+id/credit_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/insufficient_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:textColor="@color/backgroundColor" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pay_button"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="monospace"
+            android:onClick="buyMore"
+            android:padding="10dp"
+            android:text="Buy more Credits"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/gym_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            app:civ_border_color="@color/light_grey"
+            app:civ_border_width="2dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

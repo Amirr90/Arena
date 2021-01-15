@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PaymentActivityPage"
+    tools:showIn="@layout/activity_payment_page">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <ProgressBar
+           android:visibility="gone"
+           android:layout_centerInParent="true"
+           android:id="@+id/progressBar2"
+           style="?android:attr/progressBarStyle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+       <Button
+           android:onClick="StartTransaction"
+           android:id="@+id/button2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/radio_grp"
+           android:layout_marginLeft="@dimen/_10sdp"
+           android:layout_marginTop="50dp"
+           android:layout_marginRight="@dimen/_10sdp"
+           android:background="@drawable/next_btn"
+           android:fontFamily="monospace"
+           android:padding="@dimen/_10sdp"
+           android:text="PAY"
+           android:textColor="@color/white"
+           android:textSize="18sp"
+           android:textStyle="bold" />
+
+       <TextView
+           android:id="@+id/textView16"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="20dp"
+           android:fontFamily="monospace"
+           android:padding="10dp"
+           android:text="ADD"
+           android:textColor="@color/green"
+           android:textSize="18sp" />
+
+       <TextView
+           android:layout_below="@+id/textView16"
+           android:id="@+id/textView17"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="20dp"
+           android:fontFamily="monospace"
+           android:padding="10dp"
+           android:text="ADD"
+           android:textColor="@color/green"
+           android:textSize="18sp" />
+
+       <RadioGroup
+           android:id="@+id/radio_grp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="@dimen/_10sdp">
+
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="20dp"
+               android:fontFamily="monospace"
+               android:padding="@dimen/_10sdp"
+               android:text="PayTm"
+               android:textSize="18sp" />
+
+
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="20dp"
+               android:fontFamily="monospace"
+               android:padding="@dimen/_10sdp"
+               android:text="PhonePay"
+               android:textSize="18sp" />
+
+
+       </RadioGroup>
+   </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

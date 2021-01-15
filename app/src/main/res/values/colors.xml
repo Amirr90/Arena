@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffff4444</color>
+    <color name="colorPrimaryDark">#DF3333</color>
+    <color name="colorAccent">#ffff4444</color>
+    <color name="blue_background">#ffff4444</color>
+    <color name="blue_dark">#ffff4444</color>
+    <color name="colorButton">#111010</color>
+    <color name="backgroundColor">#202020</color>
+    <color name="yello">#FF8F00</color>
+    <color name="green">#43B649</color>
+    <color name="transparent">#81360101</color>
+    <color name="rippleColorEffect">#f816a463</color>
+    <color name="btnSignIn">#ffff4444</color>
+    <color name="btnRegister">#83838c</color>
+    <color name="pink">#ffff4444</color>
+    <color name="light_grey">#E2E1E1</color>
+    <color name="colorbackground">@android:color/darker_gray</color>
+    <color name="textcolor">#F5F5F5</color>
+    <color name="textbgcolor">#526266</color>
+    <color name="darkGreen">#246327</color>
+</resources>

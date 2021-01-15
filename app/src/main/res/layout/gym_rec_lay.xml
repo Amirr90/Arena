@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                app:srcCompat="@drawable/profile" />
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="monospace"
+                android:padding="10dp"
+                android:text="Gym name"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <Button
+            android:padding="10dp"
+            android:id="@+id/pay_btn_gym_acivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay1"
+            android:layout_margin="10dp"
+            android:background="@drawable/next_btn"
+            android:fontFamily="monospace"
+            android:text="PAy at GYM"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView
+
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pay_btn_gym_acivity"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            app:cardCornerRadius="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/address_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/direction" />
+
+                <ImageView
+
+                    android:id="@+id/call_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address_icon"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/call" />
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/web_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/call_icon"
+                    android:layout_marginTop="30dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/call" />
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/call_icon"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/address_icon"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/call_icon"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/call_icon"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            app:cardCornerRadius="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:text="Photos"
+                    android:textColor="@color/backgroundColor"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/image_rec"
+                    tools:listitem="@layout/image_view"
+                    android:layout_below="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            app:cardCornerRadius="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/abou_gym"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text23"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textColor="@color/backgroundColor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            app:cardCornerRadius="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/facility_rec"
+                    tools:listitem="@layout/faciliy_view"
+                    android:layout_below="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            app:cardCornerRadius="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:text="Timing(WeekDays)"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/set_weekTiming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/A"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textColor="@color/textbgcolor"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/set_weekTiming"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:text="Timing(WeekEnd)"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ser_weekend_timing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/B"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/antic"
+                    android:padding="10dp"
+                    android:textColor="@color/textbgcolor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
